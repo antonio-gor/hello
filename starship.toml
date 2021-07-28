@@ -1,0 +1,37 @@
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜"
+error_symbol = "[✗](bold red)"
+
+[directory]
+style = "177"                          # see https://i.stack.imgur.com/KTSQa.png for colors
+
+[git_branch]
+symbol = "🌱 "
+style = "198"
+
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = true
+
+[python]
+version_format = "v${major}.${minor}"
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+
+[conda]
+style = "28"
+ignore_base = false
+format = '[$symbol$environment]($style) '
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+#[[battery.display]]
+#threshold = 20
+
+#[username]
+#show_always = true

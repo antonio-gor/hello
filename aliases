@@ -1,0 +1,4 @@
+# aliases
+alias 'dsize'='du -sh'
+alias 'ip'='curl -4 icanhazip.com'
+alias 'brewup'='brew update; brew upgrade; brew cleanup; brew doctor'

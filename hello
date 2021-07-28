@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+# install oh my zsh
+sh -c "$(curl -fSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install miniconda
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
+sh Miniconda3-latest-MacOSX-x86_64.sh
+rm Miniconda3-latest-MacOSX-x86_64.sh
+conda config --set auto_activate_base false
+conda config --set changeps1 False
+
+# install homebrew
+curl -O https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+sh install.sh
+rm install.sh
+
+# install firacode font
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+
+# install starship theme (https://starship.rs)
+brew install starship
+cat starship >> ~/.zshrc
+
+# configure starship
+mkdir -p ~/.config
+cp starship.toml ~/.config/starship.toml
+
+# add aliases to .zshrc
+cat aliases >> ~/.zshrc
